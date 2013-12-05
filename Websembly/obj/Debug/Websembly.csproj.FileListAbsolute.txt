@@ -1,0 +1,198 @@
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\bin\Debug\Resources\icon.png
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\bin\Debug\Websembly.exe
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\bin\Debug\Websembly.pdb
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\App.baml
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\App.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\Websembly.exe
+C:\Users\mac3\Desktop\Websembly\Websembly\Websembly\obj\Debug\Websembly.pdb
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.exe
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.pdb
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\Resources\icon.png
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\Websembly.exe
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\Websembly.pdb
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\App.baml
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\App.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\mac3\Desktop\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\Resources\icon.png
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\bin\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\App.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\App.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\balichmac1\Desktop\WebsemblyFolder\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\App.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\App.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\balichmac1\Desktop\WebsemblyFolder after P2\WebsemblyFolder\Websembly\Websembly\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\App.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\App.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\bin\Debug\Resources\icon.png
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\bin\Debug\Websembly.exe
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\bin\Debug\Websembly.pdb
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\bin\Debug\Resources\icon.png
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\bin\Debug\Websembly.exe
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\bin\Debug\Websembly.pdb
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\App.baml
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\App.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly.1-11.17.13\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\bin\Debug\Resources\icon.png
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\bin\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\bin\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\App.baml
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\App.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\balichmac1\Desktop\Websembly 11-19-2013\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Desktop\Websembly 11-21-2013\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\Websembly 11-21-2013\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\Websembly.pdb
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\SurfaceWindow1.baml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization1.baml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization2.baml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization3.baml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization4.baml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\App.baml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization1.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization2.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization3.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\TagVisualization4.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\App.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\Websembly_Content.g.cs
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\Websembly_MarkupCompile.cache
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\Websembly.g.resources
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\SurfaceApplication1.Properties.Resources.resources
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\bin\Debug\Resources\icon.png
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\bin\Debug\SurfaceApplication1.xml
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\bin\Debug\Websembly.exe
+C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Websembly\bin\Debug\Websembly.pdb

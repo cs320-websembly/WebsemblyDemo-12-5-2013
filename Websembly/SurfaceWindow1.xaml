@@ -1,0 +1,596 @@
+﻿
+<!--Demo Version Save Point:11/21/13 3:15pm-->
+<!-- Directions: 
+    Dog must go into top-right
+    Duck must go into bottom-left
+    Kitty must go into top-left
+    Elephant must go into bottom-middle 
+    Otters must go into bottom-right
+    Raccoons must go into middle-top--> 
+    
+    
+<s:SurfaceWindow x:Class="SurfaceApplication1.SurfaceWindow1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:s="http://schemas.microsoft.com/surface/2008"
+    Title="SurfaceApplication1"
+    mc:Ignorable="d" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Height="{Binding WindowHeight}"
+    MinHeight="800"
+    Width="{Binding WindowWidth}"
+    MinWidth="1200"
+    Background="Black"
+                     
+    SizeToContent="WidthAndHeight" d:DesignHeight="800" d:DesignWidth="1200">
+
+    <s:SurfaceWindow.Resources>
+        <XmlDataProvider x:Key="Data" XPath="Photos">
+            <x:XData>
+                <Photos xmlns="">
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg" Category="Pictures" />
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg" Category="Pictures" />
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg" Category="Pictures" />
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg" Category="Pictures" />
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg" Category="Pictures" />
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Category="Pictures" />
+                    <Picture Path="C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\piggie.jpg" Category="Pictures" />
+                    
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\caption_R1L.jpg" Category="Text" />
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\caption_R1C.jpg" Category="Text" />
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\caption_R1R.jpg" Category="Text" />
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\caption_R2L.jpg" Category="Text" />
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\caption_R2C.jpg" Category="Text" />
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\caption_R2R.jpg" Category="Text" />
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\icons\title.jpg" Category="Text" />
+
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\Videos\video1.jpg" Category="Video"/>
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\Videos\video2.jpg" Category="Video"/>
+                    <Picture Path="C:\Users\balichmac1\Desktop\Websembly Demo ReVamp\Resources\Videos\video3.jpg" Category="Video"/>
+
+
+                </Photos>
+
+            </x:XData>
+        </XmlDataProvider>
+
+        <!-- CollectionViewSource Container which will connect the XMLDataprovider to the LibraryContainer-->
+        <CollectionViewSource
+                x:Key="Source"
+                Source="{Binding Source={StaticResource Data}, XPath=Picture}">
+            <CollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="@Category" />
+            </CollectionViewSource.GroupDescriptions>
+        </CollectionViewSource>
+
+        <DataTemplate x:Key="ContainerItemTemplate">
+            <!--<Image Source="{Binding}" MaxWidth="200" />-->
+            <Image Source="{Binding XPath=@Path}" MaxWidth="200"/>
+        </DataTemplate>
+
+
+        <DataTemplate x:Key="ImageOnlyTemplate">
+            <Image Source="{Binding Source}" MaxWidth="200" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ImageAndCaptionTemplate">
+            <StackPanel>
+                <Image Source="{Binding Source}" MaxWidth="150" MaxHeight=" " Stretch="Uniform" />
+                <TextBlock Text="{Binding Caption}" MaxWidth="150" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" />
+            </StackPanel>
+        </DataTemplate>
+
+        <Style x:Key="CursorStyle" TargetType="{x:Type ContentControl}">
+            <Setter Property="ContentTemplate" Value="{StaticResource ImageOnlyTemplate}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ContentControl}">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}">
+                        </ContentPresenter>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </s:SurfaceWindow.Resources>
+    <!-- this begins a series of nested grids which create our interface -->
+    <Grid>
+
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="592*"/>
+            <ColumnDefinition Width="586*"/>
+        </Grid.ColumnDefinitions>
+        <Label FontFamily="Arial" 
+                   Content="Style Sheet" HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   FontSize="18" 
+                   Foreground="White"></Label>
+
+        <!-- this grid splits the left side into a library bar and stylesheet section -->
+        <Grid ShowGridLines="True" Background="Black" Margin="0,0,6,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="211*" />
+            </Grid.RowDefinitions>
+            <Label FontFamily="Arial" 
+                   Content="Style Sheet" 
+                   Grid.Column="0" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   FontSize="18" 
+                   Foreground="White"></Label>
+
+            <!-- nesting a grid within the left column -->
+<!--
+            <Grid HorizontalAlignment="Left" Margin="35">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Name="Text" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">Text</Button>
+                    <Button Name="Picture" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">Picture</Button>
+                    <Button Name="Video" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">Video</Button>
+                    <Button Name="None" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">None</Button>
+                </StackPanel>
+            </Grid>
+            -->
+
+            <!-- nesting a grid within the top of the left column-->
+            
+            <Grid x:Name="P_Grid" Background="LightBlue" 
+                  Height=" 396" 
+                  Width="386" 
+                  HorizontalAlignment="Right" 
+                  Margin="25">
+
+                <!-- DRAG AND DROP: SCATTERVIEW CODE-->
+                <!--Comment out the following code if testing Library Container; also comment out Drag and Drop: Scatterview Code -->
+                <!--<s:ScatterView Grid.Row="1"
+                    x:Name="scatter"
+                    Background="LightBlue"
+                    AllowDrop="True"
+                    ItemTemplate="{StaticResource ImageOnlyTemplate}"
+                    ItemsSource="{Binding ScatterItems}"
+                    PreviewTouchDown="Scatter_PreviewTouchDown"
+                    s:SurfaceDragDrop.DragCanceled="Scatter_DragCanceled"
+                    s:SurfaceDragDrop.DragCompleted="Scatter_DragCompleted"
+                    s:SurfaceDragDrop.Drop="Scatter_Drop">
+                </s:ScatterView>-->
+                <!--End of Scatterview Code-->
+
+
+                <!-- Stack Panel -->
+                <StackPanel Background="#FF48484A">
+
+                    <!-- Your Title Here Label -->
+                    <Label Margin="5" Foreground="Black" FontFamily="Arial" FontSize="22" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="305">Style Sheet 1</Label>
+
+                    <!-- P_Cover -->
+                    <Canvas Height="46" >
+
+                        <!-- All potential images for the cover photo text will go here
+                             Images should include: source, width = 366, height = 46, canvas.left = 3, canvas.top = -8, visibility = hidden (unless it is the "label" image);
+                             Note "label" (aka photoshopped thing Emma made will be a label), we need the actual label to stay transparent as it is the drop surface-->
+                        <Label Name="P_Cover_Label" Width="375" Height="46" Canvas.Left="3" Canvas.Top="-8" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropTitle" ClipToBounds="False" AllowDrop="True">
+                            <Label.Background>
+                                <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/Icons_Title.jpg" />
+                            </Label.Background>
+                        </Label>
+                        <!-- <s:SurfaceButton Name="P_Cover" Background="LightSteelBlue" Canvas.Left="8" Canvas.Top="-8" HorizontalContentAlignment="Center" Width="366" Click="ContentButton_Click"  Height="46">Add Content</s:SurfaceButton> -->
+                    </Canvas>
+
+                    <!-- Media Row 1 -->
+                    <StackPanel Orientation="Horizontal" >
+
+                        <Canvas> 
+                             <!--   <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg"   Visibility = "Hidden" x:Name="PR1L_Doggy" Canvas.Left="8" Canvas.Top="3"  Width="120" Height="90" />
+                                <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg"  Visibility = "Hidden" x:Name="PR1L_Duck"  Canvas.Left="8" Canvas.Top="3" Width="120" Height="90" />
+                                <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg"  Visibility = "Hidden" x:Name="PR1L_Kitties"  Canvas.Left="8" Canvas.Top="3" Width="120" Height="90" />
+                                <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg"  Visibility = "Hidden" x:Name="PR1L_Elephant"  Canvas.Left="8" Canvas.Top="3"  Width="120" Height="90" />
+                                <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg"  Visibility = "Hidden" x:Name="PR1L_Otters"  Canvas.Left="8" Canvas.Top="3"   Width="120" Height="90" />
+                                <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Visibility = "Hidden" x:Name="PR1L_Racoon"  Canvas.Left="8" Canvas.Top="3" Width="120" Height="90" />
+                                <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\two_pigs.jpg" Visibility = "Hidden" x:Name="PR1L_TwoPigs"  Canvas.Left="8" Canvas.Top="3" Width="120" Height="90" />
+                                -->
+                            <Label x:Name="P_R1L_Label" BorderBrush="Transparent" Canvas.Left="8" Canvas.Top="0" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop1" ClipToBounds="True" AllowDrop="True" Width="120" Height="91">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R1L_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                            <!-- <s:SurfaceButton Name="P_R1L" Canvas.Left="8" Canvas.Top="3" Background="LightSteelBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="120" Click="ContentButton_Click">Add Content</s:SurfaceButton> -->
+                        
+                        </Canvas>
+
+                        <Canvas>
+                            
+                            <!--
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg"   Visibility = "Hidden" x:Name="PR1C_Doggy" Canvas.Left="133" Canvas.Top="3"  Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg"  Visibility = "Hidden" x:Name="PR1C_Duck"  Canvas.Left="133" Canvas.Top="3" Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg"  Visibility = "Hidden" x:Name="PR1C_Kitties"  Canvas.Left="133" Canvas.Top="3" Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg"  Visibility = "Hidden" x:Name="PR1C_Elephant"  Canvas.Left="133" Canvas.Top="3"  Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg"  Visibility = "Hidden" x:Name="PR1C_Otters"  Canvas.Left="133" Canvas.Top="3"   Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Visibility = "Hidden" x:Name="PR1C_Racoon"  Canvas.Left="133" Canvas.Top="3" Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\two_pigs.jpg" Visibility = "Hidden" x:Name="PR1C_TwoPigs"  Canvas.Left="133" Canvas.Top="3" Width="120" Height="90" />
+                            -->
+                            <!--  <s:SurfaceButton Name="P_R1C" Canvas.Top="3" Canvas.Left="133" Background="LightSteelBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="120" Click="ContentButton_Click">Add Content</s:SurfaceButton> -->
+                         
+                            </Canvas>
+
+                        <Canvas>
+                         <!--      <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg"   Visibility = "Hidden" x:Name="PR1R_Doggy" Canvas.Left="258" Canvas.Top="3"  Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg"  Visibility = "Hidden" x:Name="PR1R_Duck"  Canvas.Left="258" Canvas.Top="3" Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg"  Visibility = "Hidden" x:Name="PR1R_Kitties"  Canvas.Left="258" Canvas.Top="3" Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg"  Visibility = "Hidden" x:Name="PR1R_Elephant"  Canvas.Left="258" Canvas.Top="3"  Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg"  Visibility = "Hidden" x:Name="PR1R_Otters"  Canvas.Left="258" Canvas.Top="3"   Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Visibility = "Hidden" x:Name="PR1R_Racoon"  Canvas.Left="258" Canvas.Top="3" Width="120" Height="90" />
+                               <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\two_pigs.jpg" Visibility = "Hidden" x:Name="PR1R_TwoPigs"  Canvas.Left="258" Canvas.Top="3" Width="120" Height="90" />
+                           -->
+                            <Label x:Name="P_R1R_Label" Canvas.Left="258" Canvas.Top="0" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop3" ClipToBounds="True" AllowDrop="True" Width="120" Height="90">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R1R_Label.jpg" />
+                                </Label.Background>
+                                <!-- <Label.Background>
+                                    
+                                 <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R1R_Label.jpg" /> 
+                                
+                               </Label.Background> -->
+                            </Label>
+                            <!-- <s:SurfaceButton Name="P_R1R" Canvas.Left="258" Canvas.Top="3" Background="LightSteelBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton> -->
+                            </Canvas>
+                        
+                    </StackPanel>
+
+
+                    <!-- Caption Row 1 -->
+                    <StackPanel Orientation="Horizontal">
+
+                        <Canvas MaxHeight="40" MaxWidth="120" Canvas.Left="8" Canvas.Top="97">
+                            <Label x:Name="CR1L_Label" Canvas.Left="8" Canvas.Top="97" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropCaption1" ClipToBounds="True" AllowDrop="True" Width="120" Height="40">
+                             <!--   <Label.Background>
+                                    <ImageBrush ImageSource="{Binding}"/>
+                                </Label.Background> -->
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/CR1L_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                          <!--  <s:SurfaceButton Name="C_R1L" Background="LightSteelBlue" Canvas.Top="97" Canvas.Left="8"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="120" Click="CaptionButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+
+                        <Canvas MaxHeight="40" MaxWidth="120" Canvas.Left="133" Canvas.Top="97">
+                            <Label x:Name="CR1C_Label" Canvas.Left="133" Canvas.Top="97" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropCaption2" ClipToBounds="True" AllowDrop="True" Width="120" Height="40">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/CR1C_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                            <!-- <s:SurfaceButton Name="C_R1C" Canvas.Left="133" Canvas.Top="97" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="120" Click="CaptionButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+
+                        <Canvas MaxHeight="40" MaxWidth="120" Canvas.Left="258" Canvas.Top="97">
+                            <Label x:Name="CR1R_Label" Canvas.Left="258" Canvas.Top="97" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropCaption3" ClipToBounds="True" AllowDrop="True" Width="120" Height="40">
+                               <!-- <Label.Background>
+                                    <ImageBrush ImageSource="{Binding}"/>
+                                </Label.Background> -->
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/CR1R_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                          <!--<s:SurfaceButton Name="C_R1R" Canvas.Left="258" Canvas.Top="97" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="120" Click="CaptionButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                        
+                    </StackPanel>
+
+                    <!-- Media Row 2 -->
+                    <StackPanel Orientation="Horizontal">
+                        
+                        <Canvas>
+                        <!--    <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg"   Visibility = "Hidden" x:Name="PR2L_Doggy" Canvas.Left="8" Canvas.Top="147"  Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg"  Visibility = "Hidden" x:Name="PR2L_Duck"  Canvas.Left="8" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg"  Visibility = "Hidden" x:Name="PR2L_Kitties"  Canvas.Left="8" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg"  Visibility = "Hidden" x:Name="PR2L_Elephant"  Canvas.Left="8" Canvas.Top="147"  Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg"  Visibility = "Hidden" x:Name="PR2L_Otters"  Canvas.Left="8" Canvas.Top="147"   Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Visibility = "Hidden" x:Name="PR2L_Racoon"  Canvas.Left="8" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\two_pigs.jpg" Visibility = "Hidden" x:Name="PR2L_TwoPigs"  Canvas.Left="8" Canvas.Top="147" Width="120" Height="90" />
+                            -->
+                            <Label x:Name="P_R2L_Label" Canvas.Left="8" Canvas.Top="147" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop4" ClipToBounds="True" AllowDrop="True" Width="120" Height="90">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R2L_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                            <!--   <s:SurfaceButton Name="P_R2L" Canvas.Left="8" Canvas.Top="147" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="120" Click="ContentButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                       
+                        <Canvas >
+                           <!-- <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg"   Visibility = "Hidden" x:Name="PR2C_Doggy" Canvas.Left="133" Canvas.Top="147"  Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg"  Visibility = "Hidden" x:Name="PR2C_Duck"  Canvas.Left="133" Canvas.Top="147" Width="142" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg"  Visibility = "Hidden" x:Name="PR2C_Kitties"  Canvas.Left="133" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg"  Visibility = "Hidden" x:Name="PR2C_Elephant"  Canvas.Left="133" Canvas.Top="147"  Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg"  Visibility = "Hidden" x:Name="PR2C_Otters"  Canvas.Left="133" Canvas.Top="147"   Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Visibility = "Hidden" x:Name="PR2C_Racoon"  Canvas.Left="133" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\two_pigs.jpg" Visibility = "Hidden" x:Name="PR2C_TwoPigs"  Canvas.Left="133" Canvas.Top="147" Width="120" Height="90" />
+                           -->
+                            <Label x:Name="P_R2C_Label" Canvas.Left="133" Canvas.Top="147" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop5" ClipToBounds="True" AllowDrop="True"  Width="120" Height="90">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R2C_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                            <!--  <s:SurfaceButton Name="P_R2C" Canvas.Left="133" Canvas.Top="147" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="120" Click="ContentButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                       
+                        <Canvas >
+                          <!--  <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\doggy.jpg"   Visibility = "Hidden" x:Name="PR2R_Doggy" Canvas.Left="258" Canvas.Top="147"  Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\duck.jpg"  Visibility = "Hidden" x:Name="PR2R_Duck"  Canvas.Left="258" Canvas.Top="147" Width="142" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\kitties.jpg"  Visibility = "Hidden" x:Name="PR2R_Kitties"  Canvas.Left="258" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\elephant.jpg"  Visibility = "Hidden" x:Name="PR2R_Elephant"  Canvas.Left="258" Canvas.Top="147"  Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\otters.jpg"  Visibility = "Hidden" x:Name="PR2R_Otters"  Canvas.Left="258" Canvas.Top="147"   Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\racoon.jpg" Visibility = "Hidden" x:Name="PR2R_Racoon"  Canvas.Left="258" Canvas.Top="147" Width="120" Height="90" />
+                            <Image Source= "C:\Users\balichmac1\Downloads\Websembly.1-11.17.13\Websembly\images\two_pigs.jpg" Visibility = "Hidden" x:Name="PR2R_TwoPigs"  Canvas.Left="258" Canvas.Top="147" Width="120" Height="90" />
+                            -->
+                            <Label x:Name="P_R2R_Label" Canvas.Left="258" Canvas.Top="147" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop6" ClipToBounds="True" AllowDrop="True" Width="120" Height="90">
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R2R_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                            <!--   <s:SurfaceButton Name="P_R2R" Canvas.Left="258" Canvas.Top="147" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="120" Click="ContentButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                    </StackPanel>
+
+                    <!-- Caption Row 2 -->
+                    <StackPanel Orientation="Horizontal">
+                        <Canvas MaxHeight="40" MaxWidth="120" Canvas.Left="8" Canvas.Top="242">
+                            <Label x:Name="CR2L_Label" Canvas.Left="8" Canvas.Top="242" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropCaption4" ClipToBounds="True" AllowDrop="True" Width="120" Height="40">
+                             <!-- <Label.Background>
+                                    <ImageBrush ImageSource="{Binding}"/>
+                                </Label.Background> -->
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/CR2L_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                           <!-- <s:SurfaceButton Name="C_R2L" Canvas.Left="8" Canvas.Top="242"  Background="LightSteelBlue"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="120" Click="CaptionButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                        
+                        <Canvas MaxHeight="40" MaxWidth="120" Canvas.Left="133" Canvas.Top="242">
+                            <Label x:Name="CR2C_Label" Canvas.Left="133" Canvas.Top="242" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropCaption5" ClipToBounds="True" AllowDrop="True" Width="120" Height="40">
+                              <!--  <Label.Background>
+                                    <ImageBrush ImageSource="{Binding}"/>
+                                </Label.Background> -->
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/CR2C_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                            <!--<s:SurfaceButton Name="C_R2C" Canvas.Left="133" Canvas.Top="242" Background="LightSteelBlue"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="120" Click="CaptionButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                        
+                        <Canvas MaxHeight="40" MaxWidth="120" Canvas.Left="258" Canvas.Top="242">
+                            <Label x:Name="CR2R_Label" Canvas.Left="258" Canvas.Top="242" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDropCaption6" ClipToBounds="True" AllowDrop="True" Width="120" Height="40">
+                               <!-- <Label.Background>
+                                    <ImageBrush ImageSource="{Binding}"/>
+                                </Label.Background> -->
+                                <Label.Background>
+                                    <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/CR2R_Label.jpg" />
+                                </Label.Background>
+                            </Label>
+                           <!-- <s:SurfaceButton Name="C_R2R" Canvas.Left="258" Canvas.Top="242" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="120" Click="CaptionButton_Click">Add Content</s:SurfaceButton> -->
+                        </Canvas>
+                    </StackPanel>
+                    <Label x:Name="P_R1C_Label" BorderBrush="Transparent" Canvas.Left="258" Canvas.Top="3" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop2" ClipToBounds="True" AllowDrop="True" Width="120" Height="90">
+                        <Label.Background>
+                            <ImageBrush ImageSource="file:///C:/Users/balichmac1/Desktop/Websembly%20Demo%20ReVamp/Resources/Icons/icon_P_R1C_Label.jpg" />
+                        </Label.Background>
+                    </Label>
+                    <!--  <Label Name="PR1L_Label" Background="Chartreuse" Width="113" Height="46" PreviewTouchDown="Scatter_PreviewTouchDown" s:SurfaceDragDrop.DragCanceled="OnDropTargetDragEnter" s:SurfaceDragDrop.Drop="OnDropTargetDrop" ClipToBounds="False" AllowDrop="True" /> -->
+                    <!--<Canvas MaxHeight="16" >
+                        <Label Name="P_Footer_Label" Width="366" Height="16" Canvas.Left="8" Canvas.Top="294" MinHeight="20">
+                            <Label.Background>
+                                <ImageBrush ImageSource="{Binding}"/>
+                            </Label.Background>
+                        </Label>
+                        <s:SurfaceButton Name="P_Footer" Background="LightSteelBlue" Canvas.Left="8" FontFamily="Arial" FontSize="16" Canvas.Top="294" HorizontalContentAlignment="Center" Width="365" Click="ContentButton_Click"  Height="16" >Add Content</s:SurfaceButton>
+                    </Canvas>-->
+                    <!-- Close Stack Panel -->
+                </StackPanel>
+                    
+                <!-- closes the stylesheet grid -->
+            </Grid>
+
+            <!-- LIBRARY CONTAINER -->
+            <!--Comment out the following code if testing Drag and Drop-->
+            <s:LibraryContainer Margin="93,16,115,18" Grid.Row="2" x:Name="LibraryContainer" ItemsSource="{Binding Source={StaticResource Source}}" >
+                <s:LibraryContainer.StackView>
+                   <s:StackView ItemTemplate="{StaticResource ContainerItemTemplate}"/>
+                </s:LibraryContainer.StackView>
+                <s:LibraryContainer.BarView>
+                    <s:BarView ItemTemplate="{StaticResource ContainerItemTemplate}" />
+                </s:LibraryContainer.BarView>
+            </s:LibraryContainer>
+            <!--end of Library Container code-->
+
+            <!-- closes the left panel grid -->
+
+            <!--DRAG AND DROP: SURFACELIST BOX -->
+            <!--Comment out the following code if testing Library Container; also comment out Drag and Drop scatter view-->
+            <!--<s:SurfaceListBox 
+                    Grid.Row="2"
+                    x:Name="ListBox"
+                    VerticalAlignment="Top"
+                    ItemsSource="{Binding Path=LibraryItems}"
+                    ItemTemplate="{StaticResource ImageOnlyTemplate}"
+                    AllowDrop="True"
+                    PreviewTouchDown="ListBox_PreviewTouchDown"
+                    s:SurfaceDragDrop.DragCanceled="ListBox_DragCanceled"
+                    s:SurfaceDragDrop.DragCompleted="ListBox_DragCompleted"
+                    s:SurfaceDragDrop.Drop="ListBox_Drop"  Margin="6,38,-6,0">
+
+                <s:SurfaceListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </s:SurfaceListBox.ItemsPanel>
+            </s:SurfaceListBox>-->
+            <!-- end of SurfaceList box code -->
+
+
+        </Grid>
+
+        <GridSplitter HorizontalAlignment="Right"
+                      VerticalAlignment="Stretch" ResizeBehavior="PreviousAndNext"
+                      Width="5" Background="#FFBCBCBC"/>
+
+
+
+        <ScrollViewer HorizontalAlignment="Right" Grid.Column="1" Width="574" Margin="0,0,12,78">
+            <!-- this section of the grid correlates to the Generated Code -->
+
+            <Label FontFamily="Arial" 
+                   Content="Generated Code" 
+                   Grid.Column="1" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   FontSize="18" 
+                   Foreground="White"></Label>
+
+        </ScrollViewer>
+
+        <Label Name="generatedCode"
+               Grid.Column="1" 
+               FontFamily="Courier New" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               FontSize="18" 
+               Foreground="White"/>
+
+
+
+        <GridSplitter ResizeDirection="Columns" Margin="0,0,6,0" />
+
+
+    </Grid>
+
+
+
+    <!-- initial grid -->
+    <!-- <Grid> -->
+
+    <!-- <DockPanel> -->
+    <!--Websembly header at the top -->
+
+    <!-- <UniformGrid VerticalAlignment="Center" Height="100" DockPanel.Dock="Top" Columns="1" Background="LightGray">
+                <Label Grid.RowSpan="3" FontSize="24" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" Content="Websembly"/>
+                </UniformGrid> -->
+
+    <!-- <UniformGrid VerticalAlignment="Stretch" DockPanel.Dock="Top" Columns="2" Rows="1"> -->
+
+    <!--Left side for the style sheets -->
+    <!--  <Border BorderBrush="Black" BorderThickness="2">
+                    <DockPanel Background="CadetBlue" VerticalAlignment="Stretch" LastChildFill="True" Width="600">
+                        <Label HorizontalAlignment="Left" FontSize="18" Foreground="Black" VerticalAlignment="Top" FontFamily="Arial">Portfolio Layout</Label>
+
+
+                        // Code for making the style sheet //
+                        <Grid Background="LightBlue" Height=" 400" Width="386" HorizontalAlignment="Right" Margin="25">
+
+
+                            // Stack Panel //
+                            <StackPanel>
+                                // Your Title Here Label //
+                                <Label Margin="5" Foreground="Black" FontFamily="Arial" FontSize="24" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="305">Your Title Here</Label>
+
+                                // P_Cover //
+                                <s:SurfaceButton Name="P_Cover"  Background="LightSteelBlue" Margin="5" HorizontalContentAlignment="Center" Width="367" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+
+                               // Media Row 1 //
+                                <StackPanel Orientation="Horizontal" >
+                                    <s:SurfaceButton Name="P_R1L" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_R1C" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_R1R" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton>
+                                </StackPanel>
+
+
+                                // Caption Row 1 //
+                                <StackPanel Orientation="Horizontal">
+                                    <s:SurfaceButton Name="P_CR1L" Margin="5" Background="LightSteelBlue"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="117" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_CR1C" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="117" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_CR1R" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="117" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+                                </StackPanel>
+
+                                // Media Row 2 //
+                                <StackPanel Orientation="Horizontal">
+                                    <s:SurfaceButton Name="P_R2L" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_R2C" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_R2R" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="90" Width="117" Click="ContentButton_Click">Add Content</s:SurfaceButton>
+                                </StackPanel>
+
+                                // Caption Row 2 //
+                                <StackPanel Orientation="Horizontal">
+                                    <s:SurfaceButton Name="P_CR2L" Margin="5" Background="LightSteelBlue"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="117" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_CR2C" Margin="5" Background="LightSteelBlue"  HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="117" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+                                    <s:SurfaceButton Name="P_CR2R" Margin="5" Background="LightSteelBlue" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="40" Width="117" Click="CaptionButton_Click">Add Content</s:SurfaceButton>
+                                </StackPanel>
+
+                                // Close Stack Panel //
+                            </StackPanel>
+                        </Grid>
+
+                    </DockPanel>
+                </Border>
+
+
+                // Right side for the Generate Code //
+                <Border BorderBrush="Black" BorderThickness="2">
+                <DockPanel Background="CadetBlue" HorizontalAlignment="Stretch"  Width="600" VerticalAlignment="Stretch">
+
+                    <Label FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Foreground="Black">Generated Code</Label>
+                    <Label Name ="generatedCode" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Foreground="Black"></Label>
+                </DockPanel>
+                </Border>
+
+                // Alex started coding here SAVING POINT HERE 11/10/13 3:15pm //
+       
+                <s:TagVisualizer x:Name="TagVisualizer1">
+                    <s:TagVisualizer.Definitions>
+                        // Pictures //
+                        <s:TagVisualizationDefinition Value="1" Source="TagVisualization1.xaml" LostTagTimeout="2000" OrientationOffsetFromTag="0" PhysicalCenterOffsetFromTag="0,0" UsesTagOrientation="True" TagRemovedBehavior="Persist" />
+                        // Text //
+                        <s:TagVisualizationDefinition Value="2" Source="TagVisualization2.xaml" LostTagTimeout="2000" OrientationOffsetFromTag="0" PhysicalCenterOffsetFromTag="0,0" UsesTagOrientation="True" TagRemovedBehavior="Persist" />
+                        // Video //
+                        <s:TagVisualizationDefinition Value="3" Source="TagVisualization3.xaml" LostTagTimeout="2000" OrientationOffsetFromTag="0" PhysicalCenterOffsetFromTag="0,100" UsesTagOrientation="True" TagRemovedBehavior="Fade" />
+                        // Style Sheet //
+                        <s:TagVisualizationDefinition Value="4" Source="TagVisualization4.xaml" LostTagTimeout="2000" OrientationOffsetFromTag="0" PhysicalCenterOffsetFromTag="0,0" UsesTagOrientation="True" TagRemovedBehavior="Persist" />
+                    </s:TagVisualizer.Definitions>
+                </s:TagVisualizer>
+            </UniformGrid>
+            
+//
+            <UniformGrid Name="TopLabel" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="50" Background="White" Columns="1">
+                <Label Foreground="Black">Websembly</Label>
+            </UniformGrid>
+            <DockPanel Name="StylesheetArea" VerticalAlignment="Stretch"  HorizontalAlignment="Left" Background="Red" Width="700">
+            <DockPanel>
+                <Label>Place your stylesheet here</Label>
+            </DockPanel>
+        </DockPanel>
+            <DockPanel Name ="Code" VerticalAlignment="Top" HorizontalAlignment="Right" Background="Blue" Width="200" Height="500">
+            <Label>Code</Label>
+        </DockPanel>
+        <DockPanel Name ="Stylesheet" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="Yellow" Width="200" Height="200">
+            <Label Foreground="Black">Place your OneCard here to save the code</Label>
+
+        </DockPanel> //
+        </DockPanel>
+        
+        // Left side of grid for text, picture, video, none buttons //
+        <Grid Background="LightBlue" Height="400" Width="164" Margin="12,230,1024,130">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Name="Text" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">Text</Button>
+                <Button Name="Picture" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">Picture</Button>
+                <Button Name="Video" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">Video</Button>
+                <Button Name="None" Width="100" FontFamily="Arial" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Black" Click="SurfaceButton_Click" Height="38">None</Button>
+            </StackPanel>
+
+        </Grid>
+        // Stuff for TagVisualizers //
+     
+    </Grid> -->
+
+</s:SurfaceWindow>
